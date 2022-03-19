@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+  --clr-primary: #1ed760;
+  --clr-secondary: #2941AB;
+  --clr-extra: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  background-color: var(--clr-secondary);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  height: auto;
+  background: #000;
+  padding: 18px 0px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0 18px;
+
+}
+
+.navbar-brand img {
+  width: 132px;
+  height: 40px;
+}
+
+.navbar-left {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.navbar-right a {
+  color: var(--clr-extra);
+}
+
+/* Hamburger Icon */
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background: none;
+  border: none;
+  z-index: 10;
+  display: none;
+  margin-top: auto;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+/* main body */
+
+.main-body {
+  height: 100vh;
+  width: 100%;
+
+}
+
+
+.main-image {
+  height: 100%;
+
+  background-image: url("/spotify_clone/img/min-width\ 1200.svg");
+  background-position: 50% 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-text h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-text h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-main {
+  margin-left: 200px;
+  margin-top: 10px;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 50px;
+  color: #000;
+  background: var(--clr-primary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+
+
+@media(max-width: 1200px) {
+  .navbar-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .main-image {
+    background-image: url("/spotify_clone/img/min-width\ 480.svg");
+  }
+
+
+}
+
+@media(max-width: 1000px) {
+  .navbar {
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar-container {
+    max-width: 750px;
+    padding-left: 20px;
+
+  }
+
+  .navbar-brand img {
+    width: 90px;
+    height: 27px;
+
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .main-image {
+    background-image: url("/spotify_clone/img/min-width\ mobile.svg");
+  }
+
+  .btn-main {
+    margin-left: 175px;
+    margin-right: 150px;
+  }
+
+}
